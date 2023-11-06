@@ -11,9 +11,16 @@ import {
 interface Props {
   open: boolean;
   onClose: () => void;
+  onSignupSuccess: () => void;
 }
 
-const SignupDialog: React.FC<Props> = ({ open, onClose }) => {
+const SignupDialog: React.FC<Props> = ({ open, onClose, onSignupSuccess }) => {
+  const handleSignup = () => {
+    // Assume signup is successful
+    onSignupSuccess(); // This will be the function passed from the App component
+    onClose(); // Close the dialog
+  };
+
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>Sign Up</DialogTitle>
@@ -43,7 +50,7 @@ const SignupDialog: React.FC<Props> = ({ open, onClose }) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel</Button>
-        <Button onClick={onClose}>Sign Up</Button>
+        <Button onClick={handleSignup}>Sign Up</Button>
       </DialogActions>
     </Dialog>
   );

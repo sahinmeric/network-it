@@ -1,12 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import { CssBaseline } from "@mui/material";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+
+const root = createRoot(container!);
+
+root.render(
   <React.StrictMode>
-    <CssBaseline /> {/* Normalize the default browser styles */}
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <Router>
+      <CssBaseline /> {/* Normalize the default browser styles */}
+      <App />
+    </Router>
+  </React.StrictMode>
 );

@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Dialog,
   DialogTitle,
@@ -11,9 +12,16 @@ import {
 interface Props {
   open: boolean;
   onClose: () => void;
+  onLoginSuccess: () => void;
 }
 
-const LoginDialog: React.FC<Props> = ({ open, onClose }) => {
+const LoginDialog: React.FC<Props> = ({ open, onClose, onLoginSuccess }) => {
+  const handleLogin = () => {
+    // Assume login is successful
+    onLoginSuccess(); // This will be the function passed from the App component
+    onClose(); // Close the dialog
+  };
+
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>Login</DialogTitle>
@@ -36,7 +44,7 @@ const LoginDialog: React.FC<Props> = ({ open, onClose }) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel</Button>
-        <Button onClick={onClose}>Login</Button>
+        <Button onClick={handleLogin}>Login</Button>
       </DialogActions>
     </Dialog>
   );
