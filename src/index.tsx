@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "./App";
 import { CssBaseline } from "@mui/material";
 import { createRoot } from "react-dom/client";
+import AppRouter from "./AppRouter";
 
 const container = document.getElementById("root");
 
@@ -16,3 +16,13 @@ root.render(
     </Router>
   </React.StrictMode>
 );
+
+function App() {
+  return (
+    <div>
+      <AppRouter />
+    </div>
+  );
+}
+
+export default App;

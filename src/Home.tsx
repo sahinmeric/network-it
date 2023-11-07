@@ -1,27 +1,28 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Button, Container } from "@mui/material";
 import LoginDialog from "./components/LoginDialog";
 import SignupDialog from "./components/SignupDialog";
-import Profile from "./components/Profile";
-import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
+  const navigate = useNavigate();
   const [loginOpen, setLoginOpen] = useState(false);
   const [signupOpen, setSignupOpen] = useState(false);
-  const history = useHistory();
 
   const handleLoginSuccess = () => {
     // Close the login dialog
     setLoginOpen(false);
     // Redirect to the profile page
-    history.push("/profile");
+    navigate("/profile");
+    //history.push("/profile");
   };
 
   const handleSignupSuccess = () => {
     // Close the signup dialog
     setSignupOpen(false);
     // Redirect to the profile page
-    history.push("/profile");
+    navigate("/profile");
+    //history.push("/profile");
   };
 
   return (
@@ -40,12 +41,6 @@ const App: React.FC = () => {
         </Toolbar>
       </AppBar>
       <Container>{/* Page content goes here */}</Container>
-      {/* Setup your routes */}
-      <Switch>
-        <Route path="/profile" component={Profile} />
-        {/* Other routes here */}
-        <Redirect from="/" to="/profile" />
-      </Switch>
       <LoginDialog
         open={loginOpen}
         onClose={() => setLoginOpen(false)}
@@ -60,4 +55,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Home;
