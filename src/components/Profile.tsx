@@ -62,75 +62,73 @@ const Profile: React.FC = () => {
       alignItems="center"
       justifyContent="center"
     >
-      <Grid item>
-        <Container component={Paper} maxWidth="sm" style={{ padding: "2rem" }}>
-          <h1>Profile</h1>
-          <form onSubmit={handleSubmit}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  label="First Name"
-                  name="firstName"
-                  value={profile.firstName}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Last Name"
-                  name="lastName"
-                  value={profile.lastName}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Job Title"
-                  name="jobTitle"
-                  value={profile.jobTitle}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <FormControl fullWidth>
-                  <InputLabel id="country-label">Location</InputLabel>
-                  <Select
-                    required
-                    labelId="country-label"
-                    id="country"
-                    name="country"
-                    value={profile.country}
-                    onChange={handleSelectChange}
-                    label="Country"
-                  >
-                    {countries.map((country) => (
-                      <MenuItem key={country.code} value={country.code}>
-                        {country.label}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </Grid>{" "}
-              <Grid item>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                >
-                  Save & continue
-                </Button>
-              </Grid>
+      <Container component={Paper} maxWidth="sm" style={{ padding: "2rem" }}>
+        <h1>Profile</h1>
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                label="First Name"
+                name="firstName"
+                value={profile.firstName}
+                onChange={handleChange}
+              />
             </Grid>
-          </form>
-        </Container>
-      </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                label="Last Name"
+                name="lastName"
+                value={profile.lastName}
+                onChange={handleChange}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                label="Job Title"
+                name="jobTitle"
+                value={profile.jobTitle}
+                onChange={handleChange}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <InputLabel id="country-label">Location</InputLabel>
+                <Select
+                  required
+                  labelId="country-label"
+                  id="country"
+                  name="country"
+                  value={profile.country}
+                  onChange={handleSelectChange}
+                  label="Country"
+                >
+                  {countries.map((country) => (
+                    <MenuItem key={country.code} value={country.code}>
+                      {country.label}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>{" "}
+            <Grid item>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+              >
+                Save & continue
+              </Button>
+            </Grid>
+          </Grid>
+        </form>
+      </Container>
     </Grid>
   );
 };
