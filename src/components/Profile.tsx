@@ -12,6 +12,8 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import countries from "../mockdata/countries";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../services/routes";
 
 interface ProfileState {
   firstName: string;
@@ -21,12 +23,14 @@ interface ProfileState {
 }
 
 const Profile: React.FC = () => {
+  const navigate = useNavigate();
+
   // Initialize state with empty default values or fetch from an API
   const [profile, setProfile] = useState<ProfileState>({
-    firstName: "",
-    lastName: "",
-    jobTitle: "",
-    country: "",
+    firstName: "John",
+    lastName: "Doe",
+    jobTitle: "Front-end Developer",
+    country: "DE",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +44,7 @@ const Profile: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to the backend
+    navigate(ROUTES.DASHBOARD);
   };
 
   const handleSelectChange = (event: SelectChangeEvent): void => {
@@ -94,7 +99,7 @@ const Profile: React.FC = () => {
               </Grid>
               <Grid item xs={12}>
                 <FormControl fullWidth>
-                  <InputLabel id="country-label">Country</InputLabel>
+                  <InputLabel id="country-label">Location</InputLabel>
                   <Select
                     required
                     labelId="country-label"
@@ -119,7 +124,7 @@ const Profile: React.FC = () => {
                   variant="contained"
                   color="primary"
                 >
-                  Save Changes
+                  Save & continue
                 </Button>
               </Grid>
             </Grid>
