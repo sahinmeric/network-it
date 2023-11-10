@@ -64,6 +64,9 @@ const Profile: React.FC = () => {
     >
       <Container component={Paper} maxWidth="sm" style={{ padding: "2rem" }}>
         <h1>Profile</h1>
+        <p>
+          Welcome to Network-IT! Please fill out your profile to get started.
+        </p>
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>

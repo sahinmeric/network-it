@@ -26,14 +26,6 @@ const SignupDialog: React.FC<Props> = ({ open, onClose, onSignupSuccess }) => {
       <DialogTitle>Sign Up</DialogTitle>
       <DialogContent>
         <TextField
-          autoFocus
-          margin="dense"
-          id="name"
-          label="Full Name"
-          type="text"
-          fullWidth
-        />
-        <TextField
           margin="dense"
           id="email"
           label="Email Address"
