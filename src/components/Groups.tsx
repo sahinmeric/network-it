@@ -1,5 +1,5 @@
 // components/Groups.js
-import React, { useState } from "react";
+import { useState } from "react";
 import groupsData from "../mockdata/groups";
 
 const Groups = () => {
