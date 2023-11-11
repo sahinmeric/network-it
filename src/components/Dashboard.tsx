@@ -1,13 +1,13 @@
 // Dashboard.tsx
 import React from "react";
-import { AppBar, Tabs, Tab, Container } from "@mui/material";
+import { AppBar, Tabs, Tab, Container, Box } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
   return (
-    <div>
+    <Box>
       <AppBar position="static">
-        <Tabs value={false}>
+        <Tabs value={false} centered>
           <Tab component={Link} to="/dashboard" label="Dashboard" />
           <Tab component={Link} to="/dashboard/groups" label="Groups" />
           <Tab component={Link} to="/dashboard/events" label="Events" />
@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
       <Container>
         <Outlet /> {/* Render nested routes */}
       </Container>
-    </div>
+    </Box>
   );
 };
 
