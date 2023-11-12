@@ -49,8 +49,15 @@ const themeOptions = createTheme({
       fontWeight: "300",
       marginTop: "10px",
     },
-    fontFamily: "Euclid Circular B",
-    fontSize: 14,
+    button: {
+      fontSize: 14,
+      fontWeight: "bold",
+      textTransform: "none",
+    },
+    caption: {
+      fontSize: 12,
+      fontWeight: "normal",
+    },
   },
   palette: {
     primary: {
