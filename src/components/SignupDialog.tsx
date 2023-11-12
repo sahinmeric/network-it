@@ -1,4 +1,4 @@
-import React from "react";
+// SignupDialog.tsx
 import {
   Dialog,
   DialogTitle,
@@ -14,11 +14,10 @@ interface Props {
   onSignupSuccess: () => void;
 }
 
-const SignupDialog: React.FC<Props> = ({ open, onClose, onSignupSuccess }) => {
+const SignupDialog = ({ open, onClose, onSignupSuccess }: Props) => {
   const handleSignup = () => {
-    // Assume signup is successful
-    onSignupSuccess(); // This will be the function passed from the App component
-    onClose(); // Close the dialog
+    onSignupSuccess();
+    onClose();
   };
 
   return (

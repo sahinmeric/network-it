@@ -1,4 +1,4 @@
-// components/Groups.js
+// Groups.js
 import { useState } from "react";
 import groupsData from "../mockdata/groups";
 import { Stack, Typography } from "@mui/material";
@@ -11,7 +11,6 @@ const Groups = () => {
     const term = e.target.value;
     setSearchTerm(term);
 
-    // Filter groups based on the search term
     const filteredGroups = groupsData.filter((group) =>
       group.name.toLowerCase().includes(term.toLowerCase())
     );
@@ -35,7 +34,6 @@ const Groups = () => {
           <div key={group.id}>
             <h3>{group.name}</h3>
             <p>Location: {group.location}</p>
-            {/* Display other group information */}
             <ul>
               {group.members.map((member) => (
                 <li key={member.memberId}>

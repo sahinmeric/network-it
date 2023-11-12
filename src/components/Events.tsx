@@ -11,7 +11,6 @@ const Events = () => {
     const term = e.target.value;
     setSearchTerm(term);
 
-    // Filter events based on the search term
     const filteredEvents = events.filter(
       (event) =>
         event.location.toLowerCase().includes(term.toLowerCase()) ||
@@ -32,7 +31,6 @@ const Events = () => {
         value={searchTerm}
         onChange={handleSearch}
       />
-
       {searchResults.map((event) => (
         <div key={event.id}>
           <h3>{event.name}</h3>
@@ -42,7 +40,6 @@ const Events = () => {
             Date & Time: {new Date(event.date).toLocaleDateString()}{" "}
             {new Date(event.date).toLocaleTimeString()}
           </p>
-          {/* Display other group information */}
           <p>Description: {event.description}</p>
           <p>Members joining:</p>
           <ul>

@@ -22,10 +22,8 @@ interface ProfileState {
   country: string;
 }
 
-const Profile: React.FC = () => {
+const Profile = () => {
   const navigate = useNavigate();
-
-  // Initialize state with empty default values or fetch from an API
   const [profile, setProfile] = useState<ProfileState>({
     firstName: "John",
     lastName: "Doe",
@@ -43,7 +41,6 @@ const Profile: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to the backend
     navigate(ROUTES.FEED);
   };
 

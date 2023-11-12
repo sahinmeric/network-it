@@ -1,5 +1,4 @@
-import React from "react";
-
+// LoginDialog.tsx
 import {
   Dialog,
   DialogTitle,
@@ -15,11 +14,10 @@ interface Props {
   onLoginSuccess: () => void;
 }
 
-const LoginDialog: React.FC<Props> = ({ open, onClose, onLoginSuccess }) => {
+const LoginDialog = ({ open, onClose, onLoginSuccess }: Props) => {
   const handleLogin = () => {
-    // Assume login is successful
-    onLoginSuccess(); // This will be the function passed from the App component
-    onClose(); // Close the dialog
+    onLoginSuccess();
+    onClose();
   };
 
   return (
