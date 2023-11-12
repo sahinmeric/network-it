@@ -3,7 +3,7 @@ enum ROUTES {
   SIGNUP = "/signup",
   LOGIN = "/login",
   PROFILE = "/profile",
-  DASHBOARD = "/dashboard",
+  FEED = "/feed",
   GROUPS = "/groups",
   EVENTS = "/events",
 }
