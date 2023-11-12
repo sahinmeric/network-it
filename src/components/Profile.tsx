@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to the backend
-    navigate(ROUTES.DASHBOARD);
+    navigate(ROUTES.FEED);
   };
 
   const handleSelectChange = (event: SelectChangeEvent): void => {

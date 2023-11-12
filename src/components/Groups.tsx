@@ -1,6 +1,7 @@
 // components/Groups.js
 import { useState } from "react";
 import groupsData from "../mockdata/groups";
+import { Stack, Typography } from "@mui/material";
 
 const Groups = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,28 +21,31 @@ const Groups = () => {
 
   return (
     <div>
-      <h2>Groups</h2>
-      <input
-        type="text"
-        placeholder="Search groups..."
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-
-      {searchResults.map((group) => (
-        <div key={group.id}>
-          <h3>{group.name}</h3>
-          <p>Location: {group.location}</p>
-          {/* Display other group information */}
-          <ul>
-            {group.members.map((member) => (
-              <li key={member.memberId}>
-                {member.memberName} - {member.jobTitle}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <Typography variant="h5" gutterBottom>
+        Groups
+      </Typography>
+      <Stack spacing={2}>
+        <input
+          type="text"
+          placeholder="Search groups..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        {searchResults.map((group) => (
+          <div key={group.id}>
+            <h3>{group.name}</h3>
+            <p>Location: {group.location}</p>
+            {/* Display other group information */}
+            <ul>
+              {group.members.map((member) => (
+                <li key={member.memberId}>
+                  {member.memberName} - {member.jobTitle}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Stack>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 // Events.tsx
 import { useState } from "react";
 import { events } from "../mockdata/generateMockData";
+import { Typography } from "@mui/material";
 
 const Events = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,7 +23,9 @@ const Events = () => {
 
   return (
     <div>
-      <h2>Events</h2>
+      <Typography variant="h5" gutterBottom>
+        Events
+      </Typography>
       <input
         type="text"
         placeholder="Search Events..."
