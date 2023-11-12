@@ -1,3 +1,5 @@
+**Live on:** https://silver-kringle-2bef55.netlify.app/
+
 **Description**:
 Network-IT is an interactive web platform designed to bridge the gap for IT professionals seeking community, collaboration, and career advancement within the tech industry, particularly for those looking to relocate. As globalization transforms the workforce, IT specialists often find themselves navigating the job market in new countries. Our platform simplifies this transition by offering a centralized hub where IT professionals can connect with peers, join location-specific groups, share opportunities, and gain insights into the local tech landscape.
 
