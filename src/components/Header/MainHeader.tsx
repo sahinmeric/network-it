@@ -32,10 +32,10 @@ const MainHeader = () => {
         <Typography variant="h5">Network-IT</Typography>
       </Link>
       <Button color="inherit" onClick={() => setSignupOpen(true)}>
-        Signup
+        <Typography>Signup</Typography>
       </Button>
       <Button color="inherit" onClick={() => setLoginOpen(true)}>
-        Login
+        <Typography>Login</Typography>
       </Button>
       <LoginDialog
         open={loginOpen}
