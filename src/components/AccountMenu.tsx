@@ -10,8 +10,11 @@ import Tooltip from "@mui/material/Tooltip";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { useGlobalContext } from "./Context/GlobalContext";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../services/routes";
 
 export default function AccountMenu() {
+  const navigate = useNavigate();
   const { setIsLoggedIn } = useGlobalContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -24,6 +27,10 @@ export default function AccountMenu() {
   const handleLogout = () => {
     setAnchorEl(null);
     setIsLoggedIn(false);
+  };
+  const handleProfileClick = () => {
+    navigate(ROUTES.PROFILE);
+    setAnchorEl(null);
   };
 
   return (
@@ -43,7 +50,7 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
         <Divider />
         <MenuItem onClick={handleClose}>
           <ListItemIcon>

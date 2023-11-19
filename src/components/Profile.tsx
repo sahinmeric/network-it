@@ -53,12 +53,7 @@ const Profile = () => {
   };
 
   return (
-    <Grid
-      container
-      style={{ minHeight: "100vh" }}
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Grid container alignItems="center" justifyContent="center">
       <Container component={Paper} maxWidth="sm" style={{ padding: "2rem" }}>
         <h1>Profile</h1>
         <p>
