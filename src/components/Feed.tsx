@@ -1,39 +1,64 @@
 // Feed.tsx
-import { Paper, Stack, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Card,
+  CardHeader,
+  IconButton,
+  Link,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+} from "@mui/material";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import feeds from "../mockdata/feeds";
 
 const Feed = () => {
   return (
-    <Stack>
-      <Typography variant="h5" gutterBottom>
-        Social Updates
-      </Typography>
-      <Paper elevation={3} style={{ padding: "20px", marginTop: "20px" }}>
-        {feeds.map((item) => (
-          <div key={item.memberId}>
-            <Typography variant="subtitle1">{item.memberName}</Typography>
-            <Typography variant="body2" color="textSecondary">
-              {item.timestamp}
-            </Typography>
-            {item.type === "note" && <Typography>{item.content}</Typography>}
-            {item.type === "video" && (
-              <div>
-                <Typography>{item.content}</Typography>
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  Watch the video
-                </a>
-              </div>
-            )}
-            {item.type === "image" && (
-              <div>
-                <Typography>{item.content}</Typography>
-                <img src={item.link} alt="Meme" style={{ maxWidth: "200px" }} />
-              </div>
-            )}
-            <hr style={{ margin: "10px 0" }} />
-          </div>
-        ))}
-      </Paper>
+    <Stack alignItems="center">
+      <List>
+        <Typography variant="h1" sx={{ marginBottom: "10px" }}>
+          Feed
+        </Typography>
+        {feeds.map(
+          ({ memberName, content, memberId, timestamp, type, link }, index) => (
+            <Card
+              variant="outlined"
+              sx={{ marginBottom: "10px", minWidth: "50vw" }}
+            >
+              <CardHeader
+                avatar={
+                  <Avatar src={`https://i.pravatar.cc/150?img=${memberId}`} />
+                }
+                action={
+                  <IconButton>
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={memberName}
+                subheader={timestamp}
+              />
+              <ListItem key={index + memberName}>
+                {type === "note" && <ListItemText secondary={content} />}
+                {type === "video" && (
+                  <Box>
+                    <ListItemText secondary={content} />
+                    <Link href={link}>Video</Link>
+                  </Box>
+                )}
+                {type === "image" && (
+                  <Box>
+                    <ListItemText secondary={content} />
+                    <img src={link} alt="Meme" style={{ maxWidth: "200px" }} />
+                  </Box>
+                )}
+              </ListItem>
+            </Card>
+          )
+        )}
+      </List>
     </Stack>
   );
 };

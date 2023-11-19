@@ -45,6 +45,52 @@ const feeds = [
     content: "Here's a picture of my dog and her puppies",
     link: "https://upload.wikimedia.org/wikipedia/commons/f/f1/S%C3%A4ugende_H%C3%BCndin.JPG",
   },
+  {
+    memberId: 7,
+    memberName: "John Doe",
+    timestamp: "12 hours ago",
+    type: "note",
+    content: "My company is hiring! DM me for more info!",
+  },
+  {
+    memberId: 8,
+    memberName: "Jane Doe",
+    timestamp: "23 hours ago",
+    type: "video",
+    content: "Check out this cool video I found on the internet!",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    memberId: 9,
+    memberName: "Jordan Doe",
+    timestamp: "1 day ago",
+    type: "image",
+    content: "Here's a picture of my cat",
+    link: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1920px-Cat_August_2010-4.jpg",
+  },
+  {
+    memberId: 10,
+    memberName: "Jill Doe",
+    timestamp: "2 days ago",
+    type: "note",
+    content: "My company just launched a new product!",
+  },
+  {
+    memberId: 11,
+    memberName: "Jack Doe",
+    timestamp: "4 days ago",
+    type: "video",
+    content: "Another week, another video!",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    memberId: 12,
+    memberName: "Jen Doe",
+    timestamp: "1 week ago",
+    type: "image",
+    content: "Here is a picture of my setup",
+    link: "https://images.prismic.io/leetdesk/c5527f47-def9-433c-9cce-23f286dbfea2_Front.jpg?auto=compress,format&rect=0,374,4000,2250&w=1920&h=1080",
+  },
 ];
 
 export default feeds;
