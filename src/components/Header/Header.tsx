@@ -3,6 +3,7 @@ import { Tab, Tabs } from "@mui/material";
 import { Link } from "react-router-dom";
 import HeaderWrapper from "../Wrapper/HeaderWrapper";
 import ROUTES from "../../services/routes";
+import AccountMenu from "../AccountMenu";
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
         <Tab component={Link} to={ROUTES.GROUPS} label="Groups" />
         <Tab component={Link} to={ROUTES.EVENTS} label="Events" />
       </Tabs>
+      <AccountMenu />
     </HeaderWrapper>
   );
 };
