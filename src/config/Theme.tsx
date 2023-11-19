@@ -5,7 +5,6 @@ import colors from "./colors";
 const themeOptions = createTheme({
   typography: {
     h1: {
-      fontFamily: "LarishNeueSemibold",
       fontSize: 20,
       lineHeight: 1.2,
       letterSpacing: "0.15px",
