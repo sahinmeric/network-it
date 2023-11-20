@@ -19,10 +19,12 @@ const AppRouter = () => {
     <MainWrapper>
       {isLoggedIn ? <Header /> : <MainHeader />}
       <ContentWrapper>
-        <Routes>
-          <Route path={ROUTES.HOME} element={<Home />} />
-          <Route path="*" element={<Navigate replace to={ROUTES.HOME} />} />
-        </Routes>
+        {!isLoggedIn && (
+          <Routes>
+            <Route path={ROUTES.HOME} element={<Home />} />
+            <Route path="*" element={<Navigate replace to={ROUTES.HOME} />} />
+          </Routes>
+        )}
         {isLoggedIn && (
           <Routes>
             <Route path={ROUTES.PROFILE} element={<Profile />} />
