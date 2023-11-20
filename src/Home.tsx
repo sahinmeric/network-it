@@ -1,5 +1,6 @@
-import { Button, Container, Paper } from "@mui/material";
+import { Container, Fab, Typography } from "@mui/material";
 import { useGlobalContext } from "./components/Context/GlobalContext";
+import colors from "./config/colors";
 
 const Home = () => {
   const { setSignupOpen } = useGlobalContext();
@@ -8,27 +9,36 @@ const Home = () => {
 
   return (
     <Container maxWidth={false} disableGutters>
-      <Paper elevation={3}>
-        <img
-          src={imgURL}
-          alt="Welcome"
-          style={{ width: "100%", height: "auto" }}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          style={{
-            position: "absolute",
-            top: "60%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-          onClick={() => setSignupOpen(true)}
-        >
-          Get Started
-        </Button>
-      </Paper>
+      <img
+        src={imgURL}
+        alt="Welcome"
+        style={{ width: "100%", height: "auto" }}
+      />
+      <Typography
+        variant="h4"
+        style={{
+          position: "absolute",
+          top: "52vh",
+          left: "50vw",
+          transform: "translate(-50%, -50%)",
+        }}
+        bgcolor={colors.white}
+      >
+        Welcome to Network-IT
+      </Typography>
+      <Fab
+        variant="extended"
+        color="primary"
+        style={{
+          position: "absolute",
+          top: "60vh",
+          left: "50vw",
+          transform: "translate(-50%, -50%)",
+        }}
+        onClick={() => setSignupOpen(true)}
+      >
+        Get Started
+      </Fab>
     </Container>
   );
 };
