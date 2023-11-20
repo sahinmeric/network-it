@@ -8,13 +8,8 @@ interface Props {
 
 const HeaderWrapper: React.FC<Props> = ({ children }) => {
   return (
-    <Box sx={{ position: "relative" }}>
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: colors.primary }}
-        elevation={0}
-        style={{ borderBottom: "1px solid #dadce0" }}
-      >
+    <Box>
+      <AppBar position="static" sx={{ backgroundColor: colors.primary }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>{children}</Toolbar>
       </AppBar>
     </Box>
