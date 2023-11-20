@@ -1,7 +1,6 @@
 // MainHeader.tsx
 import { Button, Typography } from "@mui/material";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginDialog from "../LoginDialog";
 import SignupDialog from "../SignupDialog";
 import HeaderWrapper from "../Wrapper/HeaderWrapper";
@@ -9,18 +8,20 @@ import ROUTES from "../../services/routes";
 import { useGlobalContext } from "../Context/GlobalContext";
 
 const MainHeader = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [signupOpen, setSignupOpen] = useState(false);
-  const { setIsLoggedIn } = useGlobalContext();
+  const navigate = useNavigate();
+  const { signupOpen, loginOpen, setIsLoggedIn, setLoginOpen, setSignupOpen } =
+    useGlobalContext();
 
   const handleLoginSuccess = () => {
     setLoginOpen(false);
     setIsLoggedIn(true);
+    navigate(ROUTES.FEED);
   };
 
   const handleSignupSuccess = () => {
     setSignupOpen(false);
     setIsLoggedIn(true);
+    navigate(ROUTES.PROFILE);
   };
 
   return (
