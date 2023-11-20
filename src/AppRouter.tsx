@@ -19,14 +19,16 @@ const AppRouter = () => {
     <MainWrapper>
       {isLoggedIn ? <Header /> : <MainHeader />}
       <ContentWrapper>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path="*" element={<Navigate replace to={ROUTES.HOME} />} />
+        </Routes>
         {isLoggedIn && (
           <Routes>
             <Route path={ROUTES.PROFILE} element={<Profile />} />
             <Route path={ROUTES.FEED} element={<Feed />} />
             <Route path={ROUTES.GROUPS} element={<Groups />} />
             <Route path={ROUTES.EVENTS} element={<Events />} />
-            <Route path={ROUTES.HOME} element={<Home />} />
-            <Route path="*" element={<Navigate replace to={ROUTES.HOME} />} />
           </Routes>
         )}
       </ContentWrapper>
