@@ -16,16 +16,30 @@ const Home = () => {
         style={{ width: "100%", height: "auto" }}
       />
       <Typography
-        variant="h4"
         style={{
+          fontSize: "3rem",
           position: "absolute",
-          top: "52vh",
+          top: "42vh",
           left: "50vw",
           transform: "translate(-50%, -50%)",
         }}
-        bgcolor={colors.white}
+        bgcolor={colors.lightGray}
       >
         Welcome to Network-IT
+      </Typography>
+      <Typography
+        variant="h3"
+        style={{
+          position: "absolute",
+          top: "50vh",
+          left: "50vw",
+          transform: "translate(-50%, -50%)",
+        }}
+        bgcolor={colors.mediumTransparent}
+        color={colors.white}
+      >
+        Tailored groups based on cities and countries to meet local
+        professionals and peers.
       </Typography>
       <Fab
         variant="extended"

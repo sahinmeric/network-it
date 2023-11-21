@@ -27,7 +27,6 @@ const themeOptions = createTheme({
       lineHeight: 1.33,
       letterSpacing: "normal",
       fontWeight: "normal",
-      textTransform: "uppercase",
     },
     body1: {
       fontSize: 14,

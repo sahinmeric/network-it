@@ -6,6 +6,7 @@ const colors = {
   success: "#89FAAE",
   accent: "#5FD9FA",
   transparent: "transparent",
+  mediumTransparent: "rgba(0,0,0,0.4)",
   white: "#ffffff",
   text: "#1e2b33",
 
