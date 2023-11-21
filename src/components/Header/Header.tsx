@@ -1,4 +1,5 @@
 // Header.tsx
+import React from "react";
 import HeaderWrapper from "../Wrapper/HeaderWrapper";
 import AccountMenu from "../AccountMenu";
 import NavigationTabs from "../NavigationTabs";

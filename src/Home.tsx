@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Fab, Typography } from "@mui/material";
 import { useGlobalContext } from "./components/Context/GlobalContext";
 import colors from "./config/colors";

@@ -1,4 +1,5 @@
 // AppRouter.tsx
+import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Profile from "./components/Profile";

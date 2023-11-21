@@ -1,3 +1,4 @@
+import React from "react";
 import { List, Typography } from "@mui/material";
 import { IFeeds } from "../Interfaces";
 import FeedCard from "./FeedCard";
@@ -13,7 +14,7 @@ const FeedList = ({ feeds }: FeedListProps) => {
         Feed
       </Typography>
       {feeds.feeds.map((feed) => (
-        <FeedCard feed={feed} />
+        <FeedCard key={feed.memberId} feed={feed} />
       ))}
     </List>
   );

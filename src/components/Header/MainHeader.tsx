@@ -1,4 +1,5 @@
 // MainHeader.tsx
+import React from "react";
 import { Button, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import LoginDialog from "../LoginDialog";
