@@ -27,6 +27,7 @@ const LoginDialog = ({ open, onClose, onLoginSuccess }: Props) => {
       <DialogContent>
         <TextField
           autoFocus
+          value="john.doe@mail.com"
           margin="dense"
           id="email"
           label="Email Address"
@@ -34,6 +35,7 @@ const LoginDialog = ({ open, onClose, onLoginSuccess }: Props) => {
           fullWidth
         />
         <TextField
+          value="123456"
           margin="dense"
           id="password"
           label="Password"

@@ -26,6 +26,7 @@ const SignupDialog = ({ open, onClose, onSignupSuccess }: Props) => {
       <DialogTitle>Sign Up</DialogTitle>
       <DialogContent>
         <TextField
+          value="john.doe@mail.com"
           margin="dense"
           id="email"
           label="Email Address"
@@ -33,6 +34,7 @@ const SignupDialog = ({ open, onClose, onSignupSuccess }: Props) => {
           fullWidth
         />
         <TextField
+          value="123456"
           margin="dense"
           id="password"
           label="Password"
