@@ -11,9 +11,9 @@ import {
   Paper,
   SelectChangeEvent,
 } from "@mui/material";
-import countries from "../mockdata/countries";
+import countries from "../../mockdata/countries";
 import { useNavigate } from "react-router-dom";
-import ROUTES from "../services/routes";
+import ROUTES from "../../services/routes";
 
 interface ProfileState {
   firstName: string;

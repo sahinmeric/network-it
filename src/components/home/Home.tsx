@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Fab, Typography } from "@mui/material";
-import { useGlobalContext } from "./components/Context/GlobalContext";
-import colors from "./config/colors";
+import { useGlobalContext } from "../Context/GlobalContext";
+import colors from "../../config/colors";
 
 const Home = () => {
   const { setSignupOpen } = useGlobalContext();

@@ -2,9 +2,9 @@
 import React from "react";
 import { Button, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import LoginDialog from "../LoginDialog";
-import SignupDialog from "../SignupDialog";
-import HeaderWrapper from "../Wrapper/HeaderWrapper";
+import LoginDialog from "../login/LoginDialog";
+import SignupDialog from "../signup/SignupDialog";
+import HeaderWrapper from "../wrapper/HeaderWrapper";
 import ROUTES from "../../services/routes";
 import { useGlobalContext } from "../Context/GlobalContext";
 

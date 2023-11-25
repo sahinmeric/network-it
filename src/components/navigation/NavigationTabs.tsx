@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab, Tabs } from "@mui/material";
 import { Link } from "react-router-dom";
-import ROUTES from "../services/routes";
+import ROUTES from "../../services/routes";
 
 const NavigationTabs = () => {
   return (

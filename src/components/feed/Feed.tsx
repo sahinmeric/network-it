@@ -1,7 +1,7 @@
 // Feed.tsx
 import React from "react";
 import { Stack } from "@mui/material";
-import feeds from "../mockdata/feeds";
+import feeds from "../../mockdata/feeds";
 import FeedList from "./FeedList";
 
 const Feed = () => {

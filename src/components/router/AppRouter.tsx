@@ -1,17 +1,17 @@
 // AppRouter.tsx
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Profile from "./components/Profile";
-import ROUTES from "./services/routes";
-import Groups from "./components/Groups";
-import Events from "./components/Events";
-import Feed from "./components/Feed";
-import Header from "./components/Header/Header";
-import MainHeader from "./components/Header/MainHeader";
-import MainWrapper from "./components/Wrapper/MainWrapper";
-import ContentWrapper from "./components/Wrapper/ContentWrapper";
-import { useGlobalContext } from "./components/Context/GlobalContext";
+import Home from "../home/Home";
+import Profile from "../profile/Profile";
+import ROUTES from "../../services/routes";
+import Groups from "../groups/Groups";
+import Events from "../events/Events";
+import Feed from "../feed/Feed";
+import Header from "../header/Header";
+import MainHeader from "../header/MainHeader";
+import MainWrapper from "../wrapper/MainWrapper";
+import ContentWrapper from "../wrapper/ContentWrapper";
+import { useGlobalContext } from "../Context/GlobalContext";
 
 const AppRouter = () => {
   const { isLoggedIn } = useGlobalContext();

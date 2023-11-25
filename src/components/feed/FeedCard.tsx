@@ -9,7 +9,7 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import { IFeed } from "../Interfaces";
+import { IFeed } from "../interfaces/Interfaces";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 interface FeedCardProps {

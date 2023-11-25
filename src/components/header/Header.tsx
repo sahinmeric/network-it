@@ -1,8 +1,8 @@
 // Header.tsx
 import React from "react";
-import HeaderWrapper from "../Wrapper/HeaderWrapper";
-import AccountMenu from "../AccountMenu";
-import NavigationTabs from "../NavigationTabs";
+import HeaderWrapper from "../wrapper/HeaderWrapper";
+import AccountMenu from "../account/AccountMenu";
+import NavigationTabs from "../navigation/NavigationTabs";
 
 const Header = () => {
   return (

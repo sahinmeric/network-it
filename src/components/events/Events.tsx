@@ -1,7 +1,7 @@
 // Events.tsx
 import React from "react";
 import { useState } from "react";
-import { events } from "../mockdata/generateMockData";
+import { events } from "../../mockdata/generateMockData";
 import { Typography } from "@mui/material";
 
 const Events = () => {

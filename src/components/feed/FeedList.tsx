@@ -1,6 +1,6 @@
 import React from "react";
 import { List, Typography } from "@mui/material";
-import { IFeeds } from "../Interfaces";
+import { IFeeds } from "../interfaces/Interfaces";
 import FeedCard from "./FeedCard";
 
 interface FeedListProps {

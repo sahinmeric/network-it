@@ -1,7 +1,7 @@
 // Groups.js
 import React from "react";
 import { useState } from "react";
-import groupsData from "../mockdata/groups";
+import groupsData from "../../mockdata/groups";
 import { Stack, Typography } from "@mui/material";
 
 const Groups = () => {
