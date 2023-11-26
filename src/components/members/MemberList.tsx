@@ -10,9 +10,7 @@ interface MemberListProps {
 const MemberList = ({ members }: MemberListProps) => {
   return (
     <List>
-      <Typography variant="h6" gutterBottom>
-        Members
-      </Typography>
+      <Typography variant="h6">Members</Typography>
       {members.map((member) => (
         <MemberCard key={member.memberId} member={member} />
       ))}

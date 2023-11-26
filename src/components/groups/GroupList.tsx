@@ -22,9 +22,6 @@ const GroupList = ({ groups }: GroupListProps) => {
 
   return (
     <List>
-      <Typography variant="h5" gutterBottom>
-        Groups
-      </Typography>
       {searchResults.map((group) => (
         <GroupCard key={group.id} group={group} />
       ))}

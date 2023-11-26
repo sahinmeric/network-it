@@ -4,7 +4,7 @@ import { IMember } from "../interfaces/Interfaces";
 
 const MemberCard = ({ member }: { member: IMember }) => {
   return (
-    <Card variant="outlined" sx={{ marginBottom: "10px", minWidth: "50vw" }}>
+    <Card variant="outlined" sx={{ mb: 1 }}>
       <CardHeader
         avatar={
           <Avatar src={`https://i.pravatar.cc/150?img=${member.memberId}`} />

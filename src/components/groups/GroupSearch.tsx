@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../Context/GlobalContext";
-import { Stack } from "@mui/material";
+import { Box, Stack, TextField } from "@mui/material";
 
 const GroupSearch = () => {
   const { searchGroupTerm, setSearchGroupTerm } = useGlobalContext();
@@ -10,14 +10,14 @@ const GroupSearch = () => {
   };
 
   return (
-    <Stack>
-      <input
+    <Box>
+      <TextField
         type="text"
         placeholder="Search"
         value={searchGroupTerm}
         onChange={handleChange}
       />
-    </Stack>
+    </Box>
   );
 };
 

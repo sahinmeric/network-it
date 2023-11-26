@@ -10,9 +10,6 @@ interface FeedListProps {
 const FeedList = ({ feeds }: FeedListProps) => {
   return (
     <List>
-      <Typography variant="h1" sx={{ marginBottom: "10px" }}>
-        Feed
-      </Typography>
       {feeds.map((feed) => (
         <FeedCard key={feed.memberId} feed={feed} />
       ))}
