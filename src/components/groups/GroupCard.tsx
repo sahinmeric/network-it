@@ -1,6 +1,6 @@
 import React from "react";
 import { IGroup } from "../interfaces/Interfaces";
-import { Card, CardHeader, IconButton } from "@mui/material";
+import { Card, CardHeader, IconButton, Stack, Typography } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import MemberList from "../members/MemberList";
 
@@ -9,18 +9,22 @@ interface IGroupCardProps {
 }
 
 const GroupCard = ({ group }: IGroupCardProps) => {
+  const { name, location, private: isPrivate, members } = group;
   return (
-    <Card variant="outlined" sx={{ marginBottom: "10px", minWidth: "50vw" }}>
+    <Card variant="outlined" sx={{ marginBottom: "10px" }}>
       <CardHeader
-        title={group.name + " - " + group.location}
-        subheader={group.private ? "Private" : "Public"}
+        title={name + " - " + location}
+        subheader={isPrivate ? "Private" : "Public"}
         action={
           <IconButton>
             <MoreVertIcon />
           </IconButton>
         }
       />
-      <MemberList members={group.members} />
+      <Stack alignItems="center">
+        <Typography variant="h4">Members</Typography>
+        <MemberList members={members} />
+      </Stack>
     </Card>
   );
 };

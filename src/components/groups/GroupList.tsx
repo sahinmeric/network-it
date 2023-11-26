@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography } from "@mui/material";
+import { List } from "@mui/material";
 import { IGroup } from "../interfaces/Interfaces";
 import { useGlobalContext } from "../Context/GlobalContext";
 import { useEffect } from "react";
@@ -21,7 +21,7 @@ const GroupList = ({ groups }: GroupListProps) => {
   }, [searchGroupTerm, groups, setSearchResults]);
 
   return (
-    <List>
+    <List sx={{ width: "50vw" }}>
       {searchResults.map((group) => (
         <GroupCard key={group.id} group={group} />
       ))}

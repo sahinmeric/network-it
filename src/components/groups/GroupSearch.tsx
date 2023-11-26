@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../Context/GlobalContext";
-import { Box, Stack, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 const GroupSearch = () => {
   const { searchGroupTerm, setSearchGroupTerm } = useGlobalContext();
