@@ -20,7 +20,7 @@ const FeedCard = ({ feed }: FeedCardProps) => {
   const { memberName, content, memberId, timestamp, type, link } = feed;
 
   return (
-    <Card variant="outlined" sx={{ marginBottom: "10px", minWidth: "50vw" }}>
+    <Card variant="outlined" sx={{ marginBottom: "10px" }}>
       <CardHeader
         avatar={<Avatar src={`https://i.pravatar.cc/150?img=${memberId}`} />}
         action={

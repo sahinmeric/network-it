@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography } from "@mui/material";
+import { List } from "@mui/material";
 import { IFeed } from "../interfaces/Interfaces";
 import FeedCard from "./FeedCard";
 
@@ -9,7 +9,7 @@ interface FeedListProps {
 
 const FeedList = ({ feeds }: FeedListProps) => {
   return (
-    <List>
+    <List sx={{ width: "50vw" }}>
       {feeds.map((feed) => (
         <FeedCard key={feed.memberId} feed={feed} />
       ))}
