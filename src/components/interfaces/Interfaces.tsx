@@ -19,3 +19,14 @@ export interface IGroup {
   location: string;
   members: IMember[];
 }
+
+export interface IEvent {
+  id: string;
+  name: string;
+  date: string;
+  private: boolean;
+  location: string;
+  description: string;
+  organizer: string;
+  members: IMember[];
+}
