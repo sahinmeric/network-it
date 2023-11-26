@@ -7,6 +7,15 @@ export interface IFeed {
   link?: string;
 }
 
-export interface IFeeds {
-  feeds: IFeed[];
+export interface IMember {
+  memberId: string;
+  memberName: string;
+  jobTitle: string;
+}
+export interface IGroup {
+  id: string;
+  name: string;
+  private: boolean;
+  location: string;
+  members: IMember[];
 }
