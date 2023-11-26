@@ -7,7 +7,7 @@ import FeedList from "./FeedList";
 const Feed = () => {
   return (
     <Stack alignItems="center">
-      <FeedList feeds={{ feeds }} />
+      <FeedList feeds={feeds} />
     </Stack>
   );
 };

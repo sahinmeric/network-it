@@ -1,10 +1,10 @@
 import React from "react";
 import { List, Typography } from "@mui/material";
-import { IFeeds } from "../interfaces/Interfaces";
+import { IFeed } from "../interfaces/Interfaces";
 import FeedCard from "./FeedCard";
 
 interface FeedListProps {
-  feeds: IFeeds;
+  feeds: IFeed[];
 }
 
 const FeedList = ({ feeds }: FeedListProps) => {
@@ -13,7 +13,7 @@ const FeedList = ({ feeds }: FeedListProps) => {
       <Typography variant="h1" sx={{ marginBottom: "10px" }}>
         Feed
       </Typography>
-      {feeds.feeds.map((feed) => (
+      {feeds.map((feed) => (
         <FeedCard key={feed.memberId} feed={feed} />
       ))}
     </List>
