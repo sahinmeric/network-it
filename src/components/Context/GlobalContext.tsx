@@ -5,9 +5,11 @@ interface GlobalContextValue {
   isLoggedIn: boolean;
   loginOpen: boolean;
   signupOpen: boolean;
+  searchGroupTerm: string;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
   setLoginOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setSignupOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setSearchGroupTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const GlobalContext = React.createContext<GlobalContextValue | undefined>(
@@ -34,6 +36,7 @@ export const GlobalContextProvider: React.FC<GlobalContextProviderProps> = ({
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const [signupOpen, setSignupOpen] = useState(false);
+  const [searchGroupTerm, setSearchGroupTerm] = useState("");
 
   return (
     <GlobalContext.Provider
@@ -41,9 +44,11 @@ export const GlobalContextProvider: React.FC<GlobalContextProviderProps> = ({
         isLoggedIn,
         loginOpen,
         signupOpen,
+        searchGroupTerm,
         setIsLoggedIn,
         setLoginOpen,
         setSignupOpen,
+        setSearchGroupTerm,
       }}
     >
       {children}
