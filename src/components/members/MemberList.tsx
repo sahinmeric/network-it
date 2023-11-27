@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography } from "@mui/material";
+import { List } from "@mui/material";
 import MemberCard from "./MemberCard";
 import { IMember } from "../interfaces/Interfaces";
 

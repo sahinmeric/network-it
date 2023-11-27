@@ -1,7 +1,6 @@
 import React from "react";
 import { IEvent } from "../interfaces/Interfaces";
 import {
-  Box,
   Card,
   CardContent,
   CardHeader,
