@@ -1,8 +1,7 @@
 import React from "react";
 import { IGroup } from "../interfaces/Interfaces";
-import { Card, CardHeader, IconButton, Stack, Typography } from "@mui/material";
+import { Card, CardHeader, IconButton, Stack } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import MemberList from "../members/MemberList";
 import MemberAvatarList from "../members/MemberAvatarList";
 
 interface IGroupCardProps {

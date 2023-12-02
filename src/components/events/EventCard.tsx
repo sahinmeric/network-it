@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import MemberList from "../members/MemberList";
+import MemberAvatarList from "../members/MemberAvatarList";
 
 interface IEventCardProps {
   event: IEvent;
@@ -33,7 +33,7 @@ const EventCard = ({ event }: IEventCardProps) => {
       </CardContent>
       <Stack alignItems="center">
         <Typography variant="h4">Attendees</Typography>
-        <MemberList members={members} />
+        <MemberAvatarList members={members} />
       </Stack>
     </Card>
   );
